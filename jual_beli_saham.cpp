@@ -4,13 +4,15 @@
 #include <set>
 #include <string>
 
-int maxProfit(std::vector<int>& harga) {
+using namespace std;
+
+int maxProfit(vector<int>& harga) {
     int max_profit = 0;
     int min_price = harga[0];
 
     for (int i = 1; i < harga.size(); i++) {
         if (harga[i] > min_price) {
-            max_profit = std::max(max_profit, harga[i] - min_price);
+            max_profit = max(max_profit, harga[i] - min_price);
         } else {
             min_price = harga[i];
         }
@@ -21,7 +23,11 @@ int maxProfit(std::vector<int>& harga) {
 
 
 int main(){
+    vector<int> harga_abc = {4, 3, 6, 5, 8, 7, 6};
+    vector<int> harga_xyz = {5, 3, 6, 7, 10, 9, 8};
 
+    int profit_abc = maxProfit(harga_abc);
+    int profit_xyz = maxProfit(harga_xyz);
 
 return 0;
 }

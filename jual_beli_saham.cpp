@@ -29,5 +29,9 @@ int main(){
     int profit_abc = maxProfit(harga_abc);
     int profit_xyz = maxProfit(harga_xyz);
 
+    if (profit_abc > profit_xyz) {
+        cout << "Saham pilihan = harga_abc." << endl;
+    } else if (profit_abc < profit_xyz) {
+
 return 0;
 }
